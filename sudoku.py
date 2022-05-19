@@ -20,10 +20,13 @@ for linhas in range(9):
 # print(sudoku)
 
 colunas = []
-cont = 0
+
 falhas = 0
 acertos = 0
 
+
+# verifica colunas
+cont = 0
 for i in range(0, 9):
     for linha in sudoku:
         digito = linha[cont]
@@ -36,18 +39,34 @@ for i in range(0, 9):
     cont += 1
 
 
-
+# verifica linhas
 for linha in sudoku:
     if len(set(linha)) != len(linha):
         falhas += 1
     else:
         acertos += 1
 
+# verifica matrizes 3x3
 
-if falhas > n:
+
+
+
+
+
+
+
+if falhas > 0:
     print("NAO")
-if acertos > n:
+if acertos > 0:
     print("SIM")
+
+
+
+
+
+
+
+
 
 
 # def testa_sudoku(n):
